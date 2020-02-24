@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: CaptureLTD
+    provider: github
+    repository: php-quickstart2
+  name: captureltd-php-quickstart2
+spec:
+  description: Imported application for CaptureLTD/php-quickstart2
+  httpCloneURL: https://github.com/CaptureLTD/php-quickstart2.git
+  org: CaptureLTD
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: php-quickstart2
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/CaptureLTD/php-quickstart2.git
