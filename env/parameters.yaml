@@ -1,0 +1,10 @@
+adminUser:
+  password: vault:unique-wardrobe-1582539553/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: matthew.little@capture.co.uk
+  token: vault:unique-wardrobe-1582539553/pipelineUser:token
+  username: capturematt
+prow:
+  hmacToken: vault:unique-wardrobe-1582539553/prow:hmacToken

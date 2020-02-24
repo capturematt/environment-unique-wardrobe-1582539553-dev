@@ -14,17 +14,18 @@ cluster:
   namespace: jx
   provider: eks
   region: eu-west-1
+  registry: 917980862284.dkr.ecr.eu-west-1.amazonaws.com
   vaultName: jx-vault
   zone: eu-west-1
 environments:
 - ingress:
     domain: aws.capture.limited
     externalDNS: true
-    namespaceSubDomain: -jx-dev.
+    namespaceSubDomain: -jx.
     tls:
       email: aws@capture.co.uk
-      enabled: true
-      production: false
+      enabled: false
+      production: true
   key: dev
 - ingress:
     domain: aws.capture.limited
@@ -52,7 +53,7 @@ ingress:
   namespaceSubDomain: -jx.
   tls:
     email: aws@capture.co.uk
-    enabled: true
+    enabled: false
     production: true
 kaniko: true
 repository: nexus
@@ -71,10 +72,10 @@ storage:
     enabled: true
     url: s3://jx-boot-repository-ba879bb8-1622-49b0-99f0-7647e7ce1cb7
 vault:
-  name: jx-vault
   aws:
     autoCreate: true
     iamUserName: jx-vault
+  name: jx-vault
 velero:
   schedule: ""
   ttl: ""
