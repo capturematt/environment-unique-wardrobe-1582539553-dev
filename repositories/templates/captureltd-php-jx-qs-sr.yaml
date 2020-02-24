@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: CaptureLTD
+    provider: github
+    repository: PHP-JX-QS
+  name: captureltd-php-jx-qs
+spec:
+  description: Imported application for CaptureLTD/PHP-JX-QS
+  httpCloneURL: https://github.com/CaptureLTD/PHP-JX-QS.git
+  org: CaptureLTD
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: PHP-JX-QS
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/CaptureLTD/PHP-JX-QS.git
