@@ -27,6 +27,7 @@ environments:
       enabled: false
       production: true
   key: dev
+  repository: environment-unique-wardrobe-1582539553-dev
 - ingress:
     domain: aws.capture.limited
     externalDNS: true
@@ -36,6 +37,7 @@ environments:
       enabled: true
       production: false
   key: staging
+  repository: environment-unique-wardrobe-1582539553-staging
 - ingress:
     domain: aws.capture.limited
     externalDNS: true
@@ -46,6 +48,7 @@ environments:
       enabled: true
       production: true
   key: production
+  repository: environment-unique-wardrobe-1582539553-production
 gitops: true
 ingress:
   domain: aws.capture.limited
