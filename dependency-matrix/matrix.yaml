@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: CaptureLTD
+  repo: PHP-JX-QS
+  url: https://github.com/CaptureLTD/PHP-JX-QS.git
+  version: ""
+  versionURL: ""
