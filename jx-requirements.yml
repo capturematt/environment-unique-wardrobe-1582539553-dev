@@ -1,0 +1,84 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: https://github.com/CaptureLTD/jenkins-x-boot-config
+cluster:
+  clusterName: unique-wardrobe-1582539553
+  devEnvApprovers:
+  - capturematt
+  environmentGitOwner: captureLTD
+  environmentGitPublic: true
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  provider: eks
+  region: eu-west-1
+  vaultName: jx-vault
+  zone: eu-west-1
+environments:
+- ingress:
+    domain: aws.capture.limited
+    externalDNS: true
+    namespaceSubDomain: -jx-dev.
+    tls:
+      email: aws@capture.co.uk
+      enabled: true
+      production: false
+  key: dev
+- ingress:
+    domain: aws.capture.limited
+    externalDNS: true
+    namespaceSubDomain: -jx-stage.
+    tls:
+      email: aws@capture.co.uk
+      enabled: true
+      production: false
+  key: staging
+- ingress:
+    domain: aws.capture.limited
+    externalDNS: true
+    ignoreLoadBalancer: true
+    namespaceSubDomain: -jx.
+    tls:
+      email: aws@capture.co.uk
+      enabled: true
+      production: true
+  key: production
+gitops: true
+ingress:
+  domain: aws.capture.limited
+  externalDNS: true
+  namespaceSubDomain: -jx.
+  tls:
+    email: aws@capture.co.uk
+    enabled: true
+    production: true
+kaniko: true
+repository: nexus
+secretStorage: vault
+storage:
+  backup:
+    enabled: false
+    url: ""
+  logs:
+    enabled: true
+    url: s3://jx-boot-logs-2c760377-e7e4-404e-acc2-cc137664a49f
+  reports:
+    enabled: true
+    url: s3://jx-boot-reports-05d4da94-ce7e-4aea-a969-b1a359466763
+  repository:
+    enabled: true
+    url: s3://jx-boot-repository-ba879bb8-1622-49b0-99f0-7647e7ce1cb7
+vault:
+  name: jx-vault
+  aws:
+    autoCreate: true
+    iamUserName: jx-vault
+velero:
+  schedule: ""
+  ttl: ""
+versionStream:
+  ref: v1.0.358
+  url: https://github.com/jenkins-x/jenkins-x-versions.git
+webhook: prow
