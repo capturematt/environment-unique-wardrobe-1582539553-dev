@@ -5,3 +5,9 @@ dependencies:
   url: https://github.com/CaptureLTD/PHP-JX-QS.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: CaptureLTD
+  repo: php-quickstart2
+  url: https://github.com/CaptureLTD/php-quickstart2.git
+  version: ""
+  versionURL: ""
